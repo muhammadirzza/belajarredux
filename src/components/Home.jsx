@@ -46,18 +46,40 @@ class Home extends Component{
         return(
             this.state.kendaraan==='Mobil' ? 
                 <div>
-                    <input type="number" ref='inputjam'/>Jam
-                    <div>Total Bayar Rp.{this.props.Harga},00</div>
+                    <input type="number" ref='inputjam'/> Jam
+                    <br/>
+                    <br/>
+                    <div style={{color:"blue"}}>Total Bayar <span style={{color:"black"}}> Rp.{this.props.Harga},00</span></div>
+                    <br/>
+                    <br/>
+                    <br/>
                     <button className='btn btn-primary' onClick={this.onClickBayarMobil}>Bayar</button>
+                    <br/>
+                    <br/>
+                    <br/>
                     <div>{this.props.Durasi} Jam</div>
+                    <br/>
+                    <br/>
+                    <br/>
                     <div>Catatan = {this.state.tarif}/jam</div>
                 </div>
              : 
                 <div>
-                    <input type="number" ref='inputjam'/>Jam
-                    <div>Total Bayar Rp.{this.props.Harga},00</div>
+                    <input type="number" ref='inputjam'/> Jam
+                    <br/>
+                    <br/>
+                    <div style={{color:"red"}}>Total Bayar <span style={{color:"black"}}> Rp.{this.props.Harga},00</span></div>
+                    <br/>
+                    <br/>
+                    <br/>
                     <button className='btn btn-primary' onClick={this.onClickBayarMotor}>Bayar</button>
+                    <br/>
+                    <br/>
+                    <br/>
                     <div>{this.props.Durasi} Jam</div>
+                    <br/>
+                    <br/>
+                    <br/>
                     <div>Catatan = {this.state.tarif}/jam</div>
                 </div>
         )
@@ -71,8 +93,12 @@ class Home extends Component{
                 <div>
                     <h1>Aplikasi Parkir {this.state.kendaraan}</h1>
                     <button className='btn btn-primary' value='Mobil' onClick={this.onClickMobil}>Mobil</button>
-                    &ensp;
+                    &emsp;&emsp;&emsp;&emsp;
                     <button className='btn btn-primary' value='Motor' onClick={this.onClickMotor}>Motor</button>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                     { this.state.isAboutVisible ? this.onMobilClick() : null }
                 </div>
             </center>
@@ -87,5 +113,4 @@ const MapStatetoProps = (state) => {
     }
 }
 
-// export default Home
 export default connect(MapStatetoProps,{KaliMobilAction,KaliMotorAction,inputdurasi,Back}) (Home);

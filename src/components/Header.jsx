@@ -22,17 +22,11 @@ return (
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto" navbar>
-            <NavItem>
-            
-            </NavItem>
-            <NavItem>
-            
-            </NavItem>
         </Nav>
         <NavbarText>
             <Nav>{props.Durasi} Jam</Nav>  
-            <Nav>Bayar: Rp.{props.Harga},00</Nav>  
-            <Nav></Nav>  
+            <Nav>Bayar:</Nav>  
+            <Nav style={{fontWeight:500, fontSize:'33px'}}>Rp.{props.Harga},00</Nav>  
         </NavbarText>
         </Collapse>
     </Navbar>
